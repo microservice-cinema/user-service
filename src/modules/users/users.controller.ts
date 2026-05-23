@@ -1,6 +1,10 @@
 import type {
 	CreateUserRequest,
-	CreateUserResponse
+	CreateUserResponse,
+	GetMeRequest,
+	GetMeResponse,
+	PatchUserRequest,
+	PatchUserResponse
 } from '@microservice-cinema/contracts/gen/users'
 import { Controller } from '@nestjs/common'
 import { GrpcMethod } from '@nestjs/microservices'
@@ -11,8 +15,18 @@ import { UsersService } from './users.service'
 export class UsersController {
 	public constructor(private readonly usersService: UsersService) {}
 
-	@GrpcMethod('UsersService', 'Create')
+	@GrpcMethod('UsersService', 'GetMe')
+	public async getMe(data: GetMeRequest): Promise<GetMeResponse> {
+		return await this.usersService.getMe(data)
+	}
+
+	@GrpcMethod('UsersService', 'CreateUser')
 	public async create(data: CreateUserRequest): Promise<CreateUserResponse> {
 		return await this.usersService.create(data)
+	}
+
+	@GrpcMethod('UsersService', 'PatchUser')
+	public async patch(data: PatchUserRequest): Promise<PatchUserResponse> {
+		return await this.usersService.patchUser(data)
 	}
 }

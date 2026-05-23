@@ -2,7 +2,7 @@ import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 
 import { AppModule } from './app.module'
-import { createGrpcServer } from './infrastructure/grpc/grpc.server'
+import { createGrpcServer } from './infrastructure/grpc/server/grpc.server'
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule)
@@ -11,7 +11,8 @@ async function bootstrap() {
 
 	createGrpcServer(app, config)
 
-	app.startAllMicroservices()
-	app.init()
+	await app.startAllMicroservices()
+	await app.init()
 }
+
 bootstrap()
