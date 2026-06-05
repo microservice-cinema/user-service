@@ -1,20 +1,16 @@
-import { RpcStatus } from '@microservice-cinema/common';
-import type { CreateUserRequest, GetMeRequest, PatchUserRequest } from '@microservice-cinema/contracts/gen/users';
-import { Injectable } from '@nestjs/common';
-import { RpcException } from '@nestjs/microservices';
-import { lastValueFrom } from 'rxjs';
+import { RpcStatus } from '@microservice-cinema/common'
+import type {
+	CreateUserRequest,
+	GetMeRequest,
+	PatchUserRequest
+} from '@microservice-cinema/contracts/gen/users'
+import { Injectable } from '@nestjs/common'
+import { RpcException } from '@nestjs/microservices'
+import { lastValueFrom } from 'rxjs'
 
+import { AccountClientGrpc } from '../../infrastructure/grpc/clients/account.client'
 
-
-import { AccountClientGrpc } from '../../infrastructure/grpc/clients/account.client';
-
-
-
-import { UsersRepository } from './users.repository';
-
-
-
-
+import { UsersRepository } from './users.repository'
 
 @Injectable()
 export class UsersService {
