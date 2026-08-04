@@ -1,5 +1,7 @@
 version: '3.9'
 
+name: microservice-cinema
+
 services:
   users-service:
     container_name: users-service
