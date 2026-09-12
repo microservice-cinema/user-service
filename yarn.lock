@@ -939,20 +939,20 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@microservice-cinema/common@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@microservice-cinema/common/-/common-1.1.3.tgz#68838912057b3f3c4a156169dc8104083c6bca89"
-  integrity sha512-xyLZiTChFpbchfqbM4mz83CcAF8Sof+S/YRCdL6vgqR0m3y78VdMEmGFjhkzkYN3dof2f9pVLJxPT0oodlhSuw==
+"@microservice-cinema/common@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@microservice-cinema/common/-/common-1.1.4.tgz#57ec635c336f4f23c418707deb0929c2c415d7ca"
+  integrity sha512-wenzycEBFf1lin2HRK0Up2p/gi7OXibtx6YoILSi2JMq4meJp1fR/3rreS17qSiuiA9TzuVARLPNlVE62UrjLA==
   dependencies:
-    "@microservice-cinema/contracts" "^1.1.4"
+    "@microservice-cinema/contracts" "^1.2.0"
     "@nestjs/common" "^11.1.23"
     "@nestjs/config" "^4.0.4"
     "@nestjs/microservices" "^11.1.23"
 
-"@microservice-cinema/contracts@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.1.4.tgz#6073a6f2828978a7634747ae1da965c0e1946fa3"
-  integrity sha512-AbqGDQ3lSOnWXE/gldNSZjRi7LOnhYpXf1wIpBxOTrkTiJ5UYsTRaG3Dc1recCGlc+cneOKululYNmPowDhciw==
+"@microservice-cinema/contracts@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.2.0.tgz#5288f7643e9832f485ccc5d607e76151f31faba9"
+  integrity sha512-RRblM7UrGzmb6YQAUCGaX8yzWb8Vi48c/o2RRNKzuVUGJO8Jx4ByG7af5hmQUPZrWUkzeWoTO/DNrCf1RAJrZg==
   dependencies:
     "@nestjs/microservices" "^11.1.13"
     rxjs "^7.8.2"

@@ -5,7 +5,7 @@ import type {
 	GetMeResponse,
 	PatchUserRequest,
 	PatchUserResponse
-} from '@microservice-cinema/contracts/gen/users'
+} from '@microservice-cinema/contracts/gen/ts/users'
 import { Controller } from '@nestjs/common'
 import { GrpcMethod } from '@nestjs/microservices'
 

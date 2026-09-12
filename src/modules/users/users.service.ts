@@ -1,9 +1,9 @@
 import { RpcStatus } from '@microservice-cinema/common'
-import type {
+import {
 	CreateUserRequest,
 	GetMeRequest,
 	PatchUserRequest
-} from '@microservice-cinema/contracts/gen/users'
+} from '@microservice-cinema/contracts/gen/ts/users'
 import { Injectable } from '@nestjs/common'
 import { RpcException } from '@nestjs/microservices'
 import { lastValueFrom } from 'rxjs'
@@ -54,7 +54,7 @@ export class UsersService {
 	}
 
 	public async patchUser(data: PatchUserRequest) {
-		const { userId, name } = data
+		const { userId, name, avatar } = data
 
 		const user = await this.userRepository.findById(userId)
 
@@ -65,7 +65,8 @@ export class UsersService {
 			})
 
 		await this.userRepository.update(user.id, {
-			...(name !== undefined && { name })
+			...(name !== undefined && { name }),
+			...(avatar !== undefined && { avatar})
 		})
 
 		return { ok: true }
