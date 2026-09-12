@@ -1,7 +1,7 @@
 import type {
 	AccountServiceClient,
 	GetAccountRequest
-} from '@microservice-cinema/contracts/gen/account'
+} from '@microservice-cinema/contracts/gen/ts/account'
 import { Inject, Injectable, OnModuleInit } from '@nestjs/common'
 import type { ClientGrpc } from '@nestjs/microservices'
 
